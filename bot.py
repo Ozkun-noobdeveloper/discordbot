@@ -8,7 +8,6 @@ intents.message_content = True  # 啟用訊息內容意圖
 # 初始化 Bot
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-# Bot 的事件和命令
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user.name}')
