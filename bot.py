@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 
@@ -16,5 +17,5 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send('Pong!')
 
-# 以你的 Bot Token 啟動 Bot
-bot.run('MTI5NzU1MTI5MTg2MTQzODU4NQ.GS94d7.EMhGuzUcljTJY6FmH8d4H2v7C8VhP9gVi_a9ZE')
+# 使用環境變數中的 Token 啟動 Bot
+bot.run(os.getenv('DISCORD_TOKEN'))
